@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="growth-logo.svg">
+    <title>InvestVision</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="text-center py-4">
+        <img src="growth-logo.svg" alt="logo">
+        <h1>InvestVision</h1>
+    </header>
+
+    <section class="container my-4">
+
+        <article>
+            <p>
+                Plan for your financial future with our easy-to-use Investment Growth Calculator! 
+                <br> Simply fill in your details and discover how your investment could grow by the time you retire.
+            </p>
+            <ul>
+                <li>
+                    Enter your initial investment amount
+                </li>
+                <li>
+                    Enter your expected annual interest rate
+                </li>
+                <li>
+                    Select your target retirement year
+                </li>
+                <li>
+                    Hit "Calculate" to see your potential investment growth!
+                </li>
+            </ul>
+            <p>
+                Watch your savings grow and take control of your financial journey today.
+            </p>
+        </article>
+
+        <article>
+            <form onsubmit="return getCompoundInterest()">
+
+                <label for="initialInvt">Initial Investment: </label>
+                <span>$</span><input type="number" id="initialInvt" name="initialInvt" placeholder="Enter initial amount" required><br>
+
+                <label for="interestRate">Annual Interest Rate: </label>
+                <input type="number" id="interestRate" name="interestRate" placeholder="Enter interest rate" required><span>%</span><br>
+
+                <label for="retirementYr">Year of Retirement: </label>
+                <input type="number" id="retirementYr" name="retirementYr" placeholder="Enter retirement year" required><br>
+
+                <button type="button" id="calculateBtn" class="btn btn-primary">Calculate</button>
+
+            </form>
+
+            <div id="result" class="mt-4"><p></p></div>
+        </article>
+        
+    </section>
+
+</body>
+
