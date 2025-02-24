@@ -2,11 +2,11 @@
 function getCompoundInterest(initialAmount, rate, retirementYr)
 { 
     // Calculate the number of years until retirement
-    const currentYear = new Date().getFullYear();
+    const currentYear = parseInt(new Date().getFullYear());
     const time = retirementYr-currentYear;
 
     // Compound interest formula: A = P(1 + r/100)^t
-    const futureValue = initialAmount * Math.pow(1+rate, time);
+    const futureValue = initialAmount * Math.pow(1+(rate/100), time);
     
     // Display result
     const resultDiv = document.getElementById('result');
@@ -19,9 +19,9 @@ function getCompoundInterest(initialAmount, rate, retirementYr)
 document.getElementById('calculateBtn').addEventListener('click', function() {
 
     // Get form values
-    const initialAmount = document.getElementById('initialInvt').value; 
-    const rate = document.getElementById('interestRate').value; 
-    const retirementYr = document.getElementById('retirementYr').value; 
+    const initialAmount = parseFloat(document.getElementById('initialInvt').value); 
+    const rate = parseFloat(document.getElementById('interestRate').value); 
+    const retirementYr = parseInt(document.getElementById('retirementYr').value); 
 
     getCompoundInterest(initialAmount, rate, retirementYr);
   });

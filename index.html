@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="growth-logo.svg">
+    <link rel="icon" type="image/x-icon" href="assets\growth-logo.svg">
     <title>InvestVision</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,7 +14,7 @@
 <body>
 
     <header class="text-center py-4">
-        <img src="growth-logo.svg" alt="logo">
+        <img src="assets\growth-logo.svg" alt="logo">
         <h1>InvestVision</h1>
     </header>
 
@@ -25,7 +25,7 @@
                 Plan for your financial future with our easy-to-use Investment Growth Calculator! 
                 <br> Simply fill in your details and discover how your investment could grow by the time you retire.
             </p>
-            <ul>
+            <ul class="arrow-list">
                 <li>
                     Enter your initial investment amount
                 </li>
@@ -56,11 +56,11 @@
                 <label for="retirementYr">Year of Retirement: </label>
                 <input type="number" id="retirementYr" name="retirementYr" placeholder="Enter retirement year" required><br>
 
-                <button type="button" id="calculateBtn" class="btn btn-primary">Calculate</button>
+                <button type="submit" id="calculateBtn" class="btn btn-primary">Calculate</button>
 
             </form>
 
-            <div id="result" class="mt-4"><p></p></div>
+            <div id="result"><p></p></div>
         </article>
         
     </section>
