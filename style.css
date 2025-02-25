@@ -2,29 +2,30 @@
     --color1: hsl(198, 68%, 58%);
     --color2: rgb(247, 197, 31);
     --color3: rgb(17, 10, 50);
+    --bgcolor: rgb(247, 245, 245);
 }
 html {
     scroll-padding-top: 300px;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--color3);
     margin: 0;
-    background-color: whitesmoke;
+    background-color: var(--bgcolor);
     top: 115px;
     bottom: 0;
     position: relative;
     display: flex;
     height: 100%;
+    font-size: large;
 }
 section {
-    background-color: whitesmoke;
+    background-color: var(--bgcolor);
     margin-top: 130px;
     margin-bottom: 100px;
     z-index: 2;
 }
-
 header {
     display: flex;
     box-sizing: border-box;
@@ -39,6 +40,7 @@ header {
     z-index: 3;
 }
 header h1 {
+    font-family: fantasy;
     margin: 0;
     text-align: center;
     align-items: center;
@@ -77,31 +79,36 @@ h2 {
     margin-top: 30px;
     text-decoration: underline var(--color2);
 }
-
+p{
+    text-align: center;
+    padding: 15px;
+}
 img {
     display: block;
-    margin: 0 auto; /* in combination with display block, this centers image */
+    margin: 0 auto; /* in combination with display block to center image */
     max-width: 100%;
     height: auto;
     box-shadow: 10px 10px 5px lightgray;
 }
 
 input[type="submit"] {
-    background-color: var(--color1); 
+    background-color: var(--color2); 
     margin: 5px;
-    color: white;           
+    color: white;
     border: none;           
     padding: 8px 15px;     
 }
 
 input[type="submit"]:hover {
-    background-color: var(--color2); 
-    color: var(--color1);
+    background-color: var(--color1); 
+    color: white; 
     transform: scale(1.05);    
 }
 .arrow-list{
-    list-style-type: none; /* Remove default bullet points */
-    padding-left: 0;
+    list-style-type: none; /* Remove bullet points */
+    display: block;
+    margin: 0 auto;
+    width:fit-content;  /* in combination with display block and margin auto 0 to center */
 }
 
 .arrow-list li {
@@ -110,10 +117,11 @@ input[type="submit"]:hover {
 }
 
 .arrow-list li::before {
-    content: '→'; /* Unicode arrow symbol */
+    content: '→'; 
     position: absolute;
     left: 0; /* Position the arrow on the left */
-    color: var(--color2); /* Set the color of the arrow */
+    color: var(--color2); 
     font-size: 20px; 
     font-weight: bold;
+    text-shadow: 10px;
 }
